@@ -15,23 +15,23 @@
 ```
 
 3. Levantar la aplicación
-```console
+```bash
     # Descargar python 3.8 
-    $brew install python@3.8
+    brew install python@3.8
     # Crear el ambiente virtual
-    $ python3.8 -m venv venv
+    python3.8 -m venv venv
     # Activar el ambiente virtual
-    $ source venv/bin/activate
+    source venv/bin/activate
     # Instalar las dependencias
-    $ sh build.sh
+    sh build.sh
     # Ejecutar la app
-    $ streamlit run app.py --server.port 5000
+    streamlit run app.py --server.port 5000
 ```
 
 4. Levantar la aplicación utilizando Docker
-```console
+```bash
     # Crear imagen
-    $ docker build -t app_streamlit:1.0 .
+    docker build -t app_streamlit:1.0 .
     # Levantar aplicación
-    $ docker run --name container -p 8500:8500 -it -v "(pwd):/app" app_streamlit:1.0
+    docker run --name container -p 8500:8500 -it -v "(pwd):/app" app_streamlit:1.0
 ```    
